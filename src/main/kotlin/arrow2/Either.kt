@@ -70,7 +70,7 @@ sealed class Either<out Error, out Value> {
     }.fold({ Left(it) }, { Right(it) })
   }
   
-  // Conflicts with other catch :'(
+  // Conflicts with other catch :'( https://youtrack.jetbrains.com/issue/KT-23610
   // @OptIn(ExperimentalTypeInference::class)
   // @BuilderInference
   // suspend fun <Error2> catch(
